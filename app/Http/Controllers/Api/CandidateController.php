@@ -62,23 +62,22 @@ class CandidateController extends Controller
      */
     public function update(StoreCandidateRequest $request, Candidate $candidate)
     {
-        $success = $this->candidateRepository->update($candidate->id, $request->validated());
+        $success = $this->candidateRepository->update($candidate, $request->validated());
 
         if (!$success) {
             return $this->errorResponse('Update failed', 400);
         }
 
-        $candidate->refresh();
 
-        return $this->successResponse($candidate, 'Updated successfully', 200);
+        return $this->successResponse('Updated successfully', 200);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(Candidate $candidate)
     {
-        $success = $this->candidateRepository->delete($id);
+        $success = $this->candidateRepository->delete($candidate);
 
         if (!$success) {
             return $this->errorResponse('Deletion failed', 400);

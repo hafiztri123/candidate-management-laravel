@@ -12,7 +12,7 @@ interface CandidateRepositoryInterface
     public function getPaginated(int $perPage = 15, array $columns = ['*']): LengthAwarePaginator;
     public function getById(int $id, array $columns = ['*']): ?Candidate;
     public function create(array $data): Candidate;
-    public function update(int $id, array $data): bool;
-    public function delete(int $id): bool;
+    public function update(Candidate $candidate, array $data): bool;
+    public function delete(Candidate $candidate): bool;
     public function search(array $criteria): LengthAwarePaginator;
 }

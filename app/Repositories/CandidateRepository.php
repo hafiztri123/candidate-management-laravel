@@ -9,48 +9,44 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class CandidateRepository implements CandidateRepositoryInterface
 {
-    protected $model;
     /**
      * Create a new class instance.
      */
-    public function __construct(Candidate $model)
-    {
-        $this->model = $model;
-    }
+
 
     public function getAll(array $columns = ['*']): Collection
     {
-        return $this->model->all($columns);
+        return Candidate::all($columns);
     }
 
     public function getPaginated(int $perPage = 15, array $columns = ['*']): LengthAwarePaginator
     {
-        return $this->model->paginate($perPage, $columns);
+        return Candidate::paginate($perPage, $columns);
     }
 
     public function getById(int $id, array $columns = ['*']): ?Candidate
     {
-        return $this->model->find($id, $columns);
+        return Candidate::find($id, $columns);
     }
 
     public function create(array $data): Candidate
     {
-        return $this->model->create($data);
+        return Candidate::create($data);
     }
 
-    public function update(int $id, array $data): bool
+    public function update(Candidate $candidate, array $data): bool
     {
-        return $this->model->where('id', $id)->update($data);
+        return $candidate->update($data);
     }
 
-    public function delete(int $id): bool
+    public function delete(Candidate $candidate): bool
     {
-        return $this->model->destroy($id);
+        return $candidate->delete();
     }
 
     public function search(array $criteria): LengthAwarePaginator
     {
-        $query = $this->model->query();
+        $query = Candidate::query();
 
         if (isset($criteria['search'])) {
             $searchTerm = $criteria['search'];
