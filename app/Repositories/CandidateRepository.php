@@ -73,4 +73,5 @@ class CandidateRepository implements CandidateRepositoryInterface
     }
 
 
+
 }
