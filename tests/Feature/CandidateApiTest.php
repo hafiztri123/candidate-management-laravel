@@ -29,7 +29,7 @@ class CandidateApiTest extends TestCase
 
         $response = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->getJson('/api/candidates');
+        ])->getJson('/api/v1/candidates');
 
         $response->assertStatus(200)->assertJsonCount(5, 'data');
     }
@@ -40,7 +40,7 @@ class CandidateApiTest extends TestCase
 
         $response = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->postJson('/api/candidates', $candidateData);
+        ])->postJson('/api/v1/candidates', $candidateData);
 
         // dump($response->json());
 
@@ -54,9 +54,69 @@ class CandidateApiTest extends TestCase
 
         $response = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->getJson('/api/search/candidates?search=Laravel');
+        ])->getJson('/api/v1/search/candidates?search=Laravel');
 
         $response->assertStatus(200)->assertJsonCount(1, 'data')->assertJsonPath('data.0.name', 'John Smith');
     }
+
+    public function test_candidate_is_soft_deleted()
+    {
+        $candidate = Candidate::factory()->create();
+
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->token,
+        ])->deleteJson("/api/v1/candidates/{$candidate->id}");
+
+        $response->assertStatus(204);
+        $this->assertSoftDeleted('candidates', ['id' => $candidate->id]);
+    }
+
+    public function test_can_get_trashed_candidates()
+    {
+        $candidate = Candidate::factory()->create();
+        $candidate->delete();
+
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->token,
+        ])->getJson("/api/v1/candidates/trashed");
+
+        $response->assertStatus(200)
+            ->assertJsonPath('data.0.name', $candidate->name)
+            ->assertJsonCount(1, 'data');
+    }
+
+
+    public function test_can_restore_thrashed_candidate()
+    {
+        $candidate = Candidate::factory()->create();
+        $candidate->delete();
+
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->token
+        ])->patch("/api/v1/candidates/{$candidate->id}/restore");
+
+        $response->assertStatus(200);
+        $this->assertDatabaseHas('candidates', [
+            'id' => $candidate->id,
+            'deleted_at' => null
+        ]);
+    }
+
+    public function test_can_force_delete()
+    {
+        $candidate = Candidate::factory()->create();
+
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->token
+        ])->deleteJson("/api/v1/candidates/{$candidate->id}/force");
+
+        $response->assertStatus(204);
+        $this->assertDatabaseMissing('candidates', [
+            'id' => $candidate->id
+        ]);
+    }
+
+
+
 
 }

@@ -24,7 +24,7 @@ class CandidateRepository implements CandidateRepositoryInterface
         return Candidate::paginate($perPage, $columns);
     }
 
-    public function getById(int $id, array $columns = ['*']): ?Candidate
+    public function getById($id, array $columns = ['*']): ?Candidate
     {
         return Candidate::find($id, $columns);
     }
@@ -67,6 +67,24 @@ class CandidateRepository implements CandidateRepositoryInterface
 
         return $query->paginate($criteria['per_page'] ?? 15);
     }
+
+    public function forceDelete($id)
+    {
+        $candidate = Candidate::withTrashed()->findOrFail($id);
+        return $candidate->forceDelete();
+    }
+
+    public function restore($id)
+    {
+        $candidate = Candidate::onlyTrashed()->findOrFail($id);
+        return $candidate->restore();
+    }
+
+    public function thrashed(): LengthAwarePaginator
+    {
+        return Candidate::onlyTrashed()->paginate(15);
+    }
+
 
 
 

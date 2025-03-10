@@ -15,4 +15,7 @@ interface CandidateRepositoryInterface
     public function update(Candidate $candidate, array $data): bool;
     public function delete(Candidate $candidate): bool;
     public function search(array $criteria): LengthAwarePaginator;
+    public function forceDelete($id);
+    public function restore($id);
+    public function thrashed(): LengthAwarePaginator;
 }

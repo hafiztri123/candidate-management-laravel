@@ -69,7 +69,7 @@ class CandidateController extends Controller
         }
 
 
-        return $this->successResponse('Updated successfully', 200);
+        return $this->successResponse(null, 'Updated successfully', 200);
     }
 
     /**
@@ -84,5 +84,25 @@ class CandidateController extends Controller
         }
 
         return response()->noContent();
+    }
+
+    public function restore($id)
+    {
+        $this->candidateRepository->restore($id);
+        return $this->successResponse(null, 'Candidate restored', 200);
+
+    }
+
+    public function forceDelete($id)
+    {
+        $this->candidateRepository->forceDelete($id);
+
+        return response()->noContent();
+    }
+
+    public function trashed()
+    {
+        $trashedCandidate = $this->candidateRepository->thrashed();
+        return new  CandidateCollection($trashedCandidate);
     }
 }
