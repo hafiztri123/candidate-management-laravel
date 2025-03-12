@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\ApiResponder;
+use App\Events\CandidateCreated;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCandidateRequest;
 use App\Http\Resources\CandidateCollection;
@@ -42,6 +43,7 @@ class CandidateController extends Controller
     public function store(StoreCandidateRequest $request)
     {
         $candidate = $this->candidateRepository->create($request->validated());
+        event(new CandidateCreated($candidate));
         return new CandidateResource($candidate);
     }
 
