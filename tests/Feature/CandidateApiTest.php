@@ -21,12 +21,13 @@ class CandidateApiTest extends TestCase
     {
         parent::setUp();
 
+        Role::create(['name' => 'User', 'slug' => 'user']);
+        Role::create(['name' => 'Administrator', 'slug' => 'admin']);
+
         $this->user = User::factory()->create();
         $this->token = $this->user->createToken('test-token')->plainTextToken;
 
-        $this->admin = User::factory()->create();
-        $adminRole = Role::create(['name' => 'Administrator', 'slug' => 'admin']);
-        $this->admin->roles()->attach($adminRole->id);
+        $this->admin = User::factory()->admin()->create();
         $this->adminToken = $this->admin->createToken('test-token')->plainTextToken;
     }
 
