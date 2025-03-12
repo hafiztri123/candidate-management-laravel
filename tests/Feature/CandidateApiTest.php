@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use App\Models\Candidate;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class CandidateApiTest extends TestCase
@@ -14,6 +14,8 @@ class CandidateApiTest extends TestCase
 
     protected $user;
     protected $token;
+    protected $admin;
+    protected $adminToken;
 
     protected function setUp(): void
     {
@@ -21,6 +23,11 @@ class CandidateApiTest extends TestCase
 
         $this->user = User::factory()->create();
         $this->token = $this->user->createToken('test-token')->plainTextToken;
+
+        $this->admin = User::factory()->create();
+        $adminRole = Role::create(['name' => 'Administrator', 'slug' => 'admin']);
+        $this->admin->roles()->attach($adminRole->id);
+        $this->adminToken = $this->admin->createToken('test-token')->plainTextToken;
     }
 
     public function test_can_get_all_candidates()
@@ -71,7 +78,7 @@ class CandidateApiTest extends TestCase
         $this->assertSoftDeleted('candidates', ['id' => $candidate->id]);
     }
 
-    public function test_can_get_trashed_candidates()
+    public function test_cant_get_trashed_candidates()
     {
         $candidate = Candidate::factory()->create();
         $candidate->delete();
@@ -80,13 +87,12 @@ class CandidateApiTest extends TestCase
             'Authorization' => 'Bearer ' . $this->token,
         ])->getJson("/api/v1/candidates/trashed");
 
-        $response->assertStatus(200)
-            ->assertJsonPath('data.0.name', $candidate->name)
-            ->assertJsonCount(1, 'data');
+        $response->assertStatus(403);
+
     }
 
 
-    public function test_can_restore_thrashed_candidate()
+    public function test_cant_restore_thrashed_candidate()
     {
         $candidate = Candidate::factory()->create();
         $candidate->delete();
@@ -95,14 +101,10 @@ class CandidateApiTest extends TestCase
             'Authorization' => 'Bearer ' . $this->token
         ])->patch("/api/v1/candidates/{$candidate->id}/restore");
 
-        $response->assertStatus(200);
-        $this->assertDatabaseHas('candidates', [
-            'id' => $candidate->id,
-            'deleted_at' => null
-        ]);
+        $response->assertStatus(403);
     }
 
-    public function test_can_force_delete()
+    public function test_cant_force_delete()
     {
         $candidate = Candidate::factory()->create();
 
@@ -110,13 +112,84 @@ class CandidateApiTest extends TestCase
             'Authorization' => 'Bearer ' . $this->token
         ])->deleteJson("/api/v1/candidates/{$candidate->id}/force");
 
-        $response->assertStatus(204);
-        $this->assertDatabaseMissing('candidates', [
-            'id' => $candidate->id
-        ]);
+        $response->assertStatus(403);
     }
 
+    public function test_admin_can_get_trashed_candidates()
+    {
+        $candidate = Candidate::factory()->create();
+        $candidate->delete();
 
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->adminToken
+        ])->getJson('/api/v1/candidates/trashed');
 
+        $response->assertStatus(200)->assertJsonPath('data.0.name', $candidate->name);
+    }
+
+    public function test_can_restore_thrashed_candidate()
+    {
+        $candidate = Candidate::factory()->create();
+        $candidate->delete();
+
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->adminToken
+        ])->patch("/api/v1/candidates/{$candidate->id}/restore");
+
+        $candidate->refresh();
+
+        $response->assertStatus(200);
+        $this->assertDatabaseHas('candidates', $candidate->toArray());
+    }
+
+    public function test_admin_can_force_delete()
+    {
+        $candidate = Candidate::factory()->create();
+
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->adminToken
+        ])->deleteJson("/api/v1/candidates/{$candidate->id}/force");
+
+        $response->assertStatus(204);
+        $this->assertDatabaseMissing('candidates', $candidate->toArray());
+    }
+
+    public function test_can_register()
+    {
+        $response = $this->postJson('/api/v1/register', [
+            'name' => 'test',
+            'email' => 'test@mail.com',
+            'password' => 'Testtttt@12',
+            'password_confirmation' => 'Testtttt@12'
+        ]);
+
+        $response->assertCreated();
+    }
+
+    public function test_register_fail_validation()
+    {
+        $response = $this->postJson('/api/v1/register', [
+            'name' => 'test',
+            'email' => 'test@mail.com',
+            'password' => 'Testtttt@12',
+        ]);
+
+        $response->assertStatus(422);
+    }
+
+    public function test_can_login()
+    {
+        $user = User::factory()->create([
+            'password' => 'Sudarmi12'
+        ]);
+
+        $response = $this->postJson('/api/v1/login', [
+            'email' => $user->email,
+            'password' => 'Sudarmi12',
+            'device_name' => 'Mozilla'
+        ]);
+
+        $response->assertStatus(200)->assertJsonPath('message', 'Login success');
+    }
 
 }

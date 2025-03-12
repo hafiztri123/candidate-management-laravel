@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\ApiResponder;
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -47,6 +48,7 @@ class AuthController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => [
                 'required',
+                'confirmed',
                 'string',
                 Password::min(8)
                     ->letters()
@@ -57,11 +59,15 @@ class AuthController extends Controller
             ]);
 
 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
+
+        $userRole = Role::where('slug', 'user')->first();
+        $user->roles()->attach($userRole);
+
 
         return $this->successResponse(null, 'Register success', 201);
 

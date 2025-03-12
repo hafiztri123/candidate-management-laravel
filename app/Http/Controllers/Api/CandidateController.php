@@ -9,7 +9,9 @@ use App\Http\Resources\CandidateCollection;
 use App\Http\Resources\CandidateResource;
 use App\Models\Candidate;
 use App\Repositories\CandidateRepositoryInterface;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CandidateController extends Controller
 {
@@ -77,6 +79,7 @@ class CandidateController extends Controller
      */
     public function destroy(Candidate $candidate)
     {
+
         $success = $this->candidateRepository->delete($candidate);
 
         if (!$success) {
@@ -88,20 +91,29 @@ class CandidateController extends Controller
 
     public function restore($id)
     {
-        $this->candidateRepository->restore($id);
-        return $this->successResponse(null, 'Candidate restored', 200);
+        $candidate = Candidate::onlyTrashed()->findOrFail($id);
+        Gate::authorize('restore', $candidate);
+
+        $candidate->restore();
+
+        return $this->successResponse($candidate, 'Candidate restored', 200);
 
     }
 
     public function forceDelete($id)
     {
-        $this->candidateRepository->forceDelete($id);
-
+        $candidate = Candidate::withTrashed()->findOrFail($id);
+        Gate::authorize('forceDelete', $candidate);
+        $candidate->forceDelete();
         return response()->noContent();
     }
 
     public function trashed()
     {
+        if (Gate::denies('view-trashed-candidates')) {
+            throw new AuthorizationException('You are not authorized to view trashed candidates.');
+        }
+
         $trashedCandidate = $this->candidateRepository->thrashed();
         return new  CandidateCollection($trashedCandidate);
     }
