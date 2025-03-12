@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CandidateController;
 use App\Http\Controllers\Api\CandidateSearchController;
+use App\Http\Controllers\Api\NotificationController;
 use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,12 @@ Route::middleware('throttle:api')->prefix('v1')->group(function () {
         Route::get('/search/candidates', CandidateSearchController::class);
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::get('/me', [AuthController::class, 'getSelfProfile']);
+        
+        Route::get('notifications', [NotificationController::class, 'index']);
+        Route::get('notifications/unread', [NotificationController::class, 'unread']);
+        Route::post('notifications/mark-all-read', [NotificationController::class, 'markAllAsRead']);
+        Route::post('notifications/{id}/read', [NotificationController::class, 'markAsRead']);
+        Route::delete('notifications/{id}', [NotificationController::class, 'destroy']);
 
 
     });

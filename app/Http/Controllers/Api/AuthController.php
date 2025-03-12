@@ -76,7 +76,8 @@ class AuthController extends Controller
     public function getSelfProfile(Request $request)
     {
         $user = Auth::user();
+        $notifications = $user->getUnreadNotificationsCountAttribute;
 
-        return $this->successResponse($user, 'Self profile', 200);
+        return $this->successResponse([$user, 'unread_notification' => $notifications], 'Self profile', 200);
     }
 }
