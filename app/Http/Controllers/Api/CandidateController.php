@@ -43,7 +43,6 @@ class CandidateController extends Controller
     public function store(StoreCandidateRequest $request)
     {
         $candidate = $this->candidateRepository->create($request->validated());
-        event(new CandidateCreated($candidate));
         return new CandidateResource($candidate);
     }
 

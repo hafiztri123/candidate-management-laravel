@@ -2,10 +2,18 @@
 
 namespace App\Repositories;
 
+use App\Events\CandidateCreated;
+use App\Events\CandidateDeleted;
+use App\Events\CandidateForceDeleted;
+use App\Events\CandidateRestored;
+use App\Events\CandidateStatusChanged;
+use App\Events\CandidateUpdated;
 use App\Models\Candidate;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class CandidateRepository implements CandidateRepositoryInterface
 {
@@ -31,16 +39,23 @@ class CandidateRepository implements CandidateRepositoryInterface
 
     public function create(array $data): Candidate
     {
-        return Candidate::create($data);
+        $candidate = Candidate::create($data);
+        event(new CandidateCreated($candidate));
+        return $candidate;
     }
 
     public function update(Candidate $candidate, array $data): bool
     {
+        if (array_keys($data) === ['status']){
+            event(new CandidateStatusChanged($candidate, $candidate->status, $data['status'], Auth::user()));
+        }
+        event(new CandidateUpdated($candidate, $candidate->toArray(), $data));
         return $candidate->update($data);
     }
 
     public function delete(Candidate $candidate): bool
     {
+        event(new CandidateDeleted($candidate));
         return $candidate->delete();
     }
 
@@ -71,12 +86,14 @@ class CandidateRepository implements CandidateRepositoryInterface
     public function forceDelete($id)
     {
         $candidate = Candidate::withTrashed()->findOrFail($id);
+        event(new CandidateForceDeleted($candidate->toArray()));
         return $candidate->forceDelete();
     }
 
     public function restore($id)
     {
         $candidate = Candidate::onlyTrashed()->findOrFail($id);
+        event(new CandidateRestored($candidate));
         return $candidate->restore();
     }
 
