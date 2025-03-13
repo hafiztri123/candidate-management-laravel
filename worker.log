@@ -202,3 +202,23 @@
   2025-03-13 02:35:37 App\Notifications\NewCandidateCreated ...... 8.46ms DONE
   2025-03-13 02:35:37 App\Notifications\NewCandidateCreated .......... RUNNING
   2025-03-13 02:35:37 App\Notifications\NewCandidateCreated ...... 7.31ms DONE
+  2025-03-13 06:33:53 App\Listeners\SendNewCandidateNotification ..... RUNNING
+  2025-03-13 06:33:53 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-13 06:33:53 App\Listeners\SendNewCandidateNotification  25.77ms DONE
+  2025-03-13 06:33:53 App\Notifications\NewCandidateCreated .......... RUNNING
+  2025-03-13 06:33:53 App\Listeners\LogCandidateActivity ........ 20.76ms DONE
+  2025-03-13 06:33:53 App\Notifications\NewCandidateCreated ..... 22.44ms DONE
+  2025-03-13 06:34:53 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-13 06:34:53 App\Listeners\LogCandidateActivity ........ 10.43ms DONE
+  2025-03-13 06:35:38 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-13 06:35:38 App\Listeners\LogCandidateActivity ........ 27.12ms DONE
+  2025-03-13 06:48:51 App\Listeners\SendNewCandidateNotification ..... RUNNING
+  2025-03-13 06:48:51 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-13 06:48:51 App\Listeners\LogCandidateActivity ........ 16.07ms DONE
+  2025-03-13 06:48:51 App\Notifications\NewCandidateCreated .......... RUNNING
+  2025-03-13 06:48:51 App\Listeners\SendNewCandidateNotification  49.74ms DONE
+  2025-03-13 06:48:51 App\Notifications\NewCandidateCreated ..... 20.91ms DONE
+  2025-03-13 06:49:06 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-13 06:49:06 App\Listeners\LogCandidateActivity ......... 9.26ms DONE
+  2025-03-13 06:50:03 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-13 06:50:03 App\Listeners\LogCandidateActivity ......... 9.17ms DONE

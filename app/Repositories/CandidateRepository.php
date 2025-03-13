@@ -49,7 +49,9 @@ class CandidateRepository implements CandidateRepositoryInterface
         if (array_keys($data) === ['status']){
             event(new CandidateStatusChanged($candidate, $candidate->status, $data['status'], Auth::user()));
         }
-        event(new CandidateUpdated($candidate, $candidate->toArray(), $data));
+
+        $oldData = array_intersect_key($candidate->toArray(), $data);
+        event(new CandidateUpdated($candidate, $oldData, $data));
         return $candidate->update($data);
     }
 
