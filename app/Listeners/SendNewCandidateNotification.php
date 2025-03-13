@@ -29,6 +29,7 @@ class SendNewCandidateNotification implements ShouldQueue
             $query->where('slug', 'admin');
         })->get();
 
-        Notification::send($hrAdmins, new NewCandidateCreated($event->candidate));
+        Notification::send($hrAdmins, (new NewCandidateCreated($event->candidate))->afterCommit());
+
     }
 }
