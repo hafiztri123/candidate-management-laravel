@@ -17,11 +17,13 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY . /var/www
 
 WORKDIR /var/www
 
 COPY --chown=www-data:www-data . /var/www
+
+COPY --chown=www-data:www-data .env /var/www/.env
+
 
 RUN composer install --optimize-autoloader --no-dev
 RUN php artisan key:generate --force
