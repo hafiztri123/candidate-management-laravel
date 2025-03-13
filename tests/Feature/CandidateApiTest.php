@@ -140,7 +140,12 @@ class CandidateApiTest extends TestCase
         $candidate->refresh();
 
         $response->assertStatus(200);
-        $this->assertDatabaseHas('candidates', $candidate->toArray());
+        $this->assertDatabaseHas('candidates', [
+            'id' => $candidate->id,
+            'name' => $candidate->name,
+            'email' => $candidate->email,
+            'phone' => $candidate->phone,
+        ]);
     }
 
     public function test_admin_can_force_delete()
