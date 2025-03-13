@@ -14,11 +14,14 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+        if(!User::where('email', 'hafiz.triwahyu@gmail.com')->exists()){
+            User::factory()->admin()->create([
+                'name' => 'Hafizh Tri Wahyu Muhammad',
+                'email' => 'hafiz.triwahyu@gmail.com',
+                'password' => Hash::make('Sudarmi12')
+            ]);
+        }
 
-        User::factory()->admin()->create([
-            'name' => 'Hafizh Tri Wahyu Muhammad',
-            'email' => 'hafiz.triwahyu@gmailc.om',
-            'password' => Hash::make('Sudarmi12')
-        ]);
+
     }
 }
