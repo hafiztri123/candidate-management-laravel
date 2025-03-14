@@ -1,0 +1,1018 @@
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel_cache_illuminate:queue:restart))
+
+  at /home/hafizh/projects/ongoing/candidate-management/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823
+    819▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    820▕                 );
+    821▕             }
+    822▕ 
+  ➜ 823▕             throw new QueryException(
+    824▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    825▕             );
+    826▕         }
+    827▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/hafizh/projects/ongoing/candidate-management/artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
+  2025-03-14 01:17:07 App\Listeners\SendNewCandidateNotification ..... RUNNING
+  2025-03-14 01:17:07 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-14 01:17:07 App\Notifications\NewCandidateCreated ..........  2025-03-14 01:17:07 App\Listeners\SendNewCandidateNotification RUNNING
+  26.27ms DONE
+  2025-03-14 01:17:07 App\Listeners\LogCandidateActivity ........ 17.39ms DONE
+  2025-03-14 01:17:07 App\Notifications\NewCandidateCreated ..... 33.36ms DONE
+  2025-03-14 01:17:37 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-14 01:17:37 App\Listeners\LogCandidateActivity ........ 10.86ms DONE
+  2025-03-14 01:17:58 App\Listeners\LogCandidateActivity ............. RUNNING
+  2025-03-14 01:17:58 App\Listeners\LogCandidateActivity ........ 16.09ms DONE
