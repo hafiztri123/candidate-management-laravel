@@ -27,7 +27,7 @@ class CandidateRepository implements CandidateRepositoryInterface
         return Candidate::all($columns);
     }
 
-    public function getPaginated(int $perPage = 15, array $columns = ['*']): LengthAwarePaginator
+    public function getPaginated(int $perPage = 5, array $columns = ['*']): LengthAwarePaginator
     {
         return Candidate::paginate($perPage, $columns);
     }

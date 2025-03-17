@@ -25,7 +25,7 @@ class CandidateSearchController extends Controller
             'status' => $request->input('status'),
             'sort_by' => $request->input('sort_by', 'created_at'),
             'sort_direction' => $request->input('sort_direction', 'desc'),
-            'per_page' => $request->input('per_page', 15)
+            'per_page' => $request->input('per_page', 10)
         ];
 
         $candidate = $this->candidateRepository->search($criteria);

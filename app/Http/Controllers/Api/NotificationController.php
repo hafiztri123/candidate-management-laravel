@@ -21,13 +21,26 @@ class NotificationController extends Controller
     public function index(Request $request)
     {
         return NotificationResource::collection(
-            $request->user()->notifications()->paginate(15)
+            $request->user()->notifications()->paginate(5)
         );
     }
 
     public function markAllAsRead(Request $request)
     {
         $request->user()->unreadNotifications->markAsRead();
+
+        return $this->successResponse(null, 'All Notification marked as read', 200);
+    }
+
+    public function markAsRead(Request $request, $id)
+    {
+        $notification = $request->user()->unreadNotifications()->where('id', $id)->first();
+
+        if (!$notification) {
+            return $this->errorResponse('Notification not found', 404);
+        }
+
+        $notification->update(['read_at' => now()]);
 
         return $this->successResponse(null, 'Notification marked as read', 200);
     }
